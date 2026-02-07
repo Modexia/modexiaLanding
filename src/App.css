@@ -59,19 +59,19 @@
 
 .nav-links {
   display: none;
-  gap: 32px;
+  gap: 40px;
 }
 
 .nav-links a {
-  color: #425466;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #0a2540;
+  color: var(--text-primary);
 }
 
 .nav-actions {
