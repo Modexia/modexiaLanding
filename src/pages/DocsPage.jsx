@@ -1,5 +1,5 @@
-import { Book, Code2, Rocket, Terminal, Zap, FileText, Video, MessageCircle, Github, ArrowRight, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
+import { Book, Code2, Rocket, Terminal, Zap, FileText, Video, MessageCircle, Github, ArrowRight, ChevronRight, Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Check = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -9,6 +9,27 @@ const Check = ({ size }) => (
 
 const DocsPage = () => {
   const [activeSection, setActiveSection] = useState('quickstart');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showMenuBtn, setShowMenuBtn] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowMenuBtn(false);
+      } else {
+        setShowMenuBtn(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const sidebarSections = [
     {
@@ -283,7 +304,15 @@ console.log(\`Current balance: $\${balance}\`);`}</pre>
       <section className="docs-layout">
         <div className="container">
           <div className="docs-container">
-            <aside className="docs-sidebar">
+            <button 
+              className={`mobile-docs-menu-btn ${showMenuBtn ? 'visible' : 'hidden'}`}
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+            >
+              {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
+              <span>{sidebarOpen ? 'Close Menu' : 'Menu'}</span>
+            </button>
+
+            <aside className={`docs-sidebar ${sidebarOpen ? 'mobile-open' : ''}`}>
               <div className="sidebar-content">
                 {sidebarSections.map((section, idx) => (
                   <div key={idx} className="sidebar-section">
@@ -293,7 +322,10 @@ console.log(\`Current balance: $\${balance}\`);`}</pre>
                         <li key={item.id}>
                           <button
                             className={`sidebar-item ${activeSection === item.id ? 'active' : ''}`}
-                            onClick={() => setActiveSection(item.id)}
+                            onClick={() => {
+                              setActiveSection(item.id);
+                              setSidebarOpen(false);
+                            }}
                           >
                             {item.icon}
                             <span>{item.name}</span>
