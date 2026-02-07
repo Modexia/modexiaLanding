@@ -47,19 +47,10 @@
 }
 
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   font-size: 24px;
   font-weight: 700;
   color: #0a2540;
   text-decoration: none;
-}
-
-.logo-image {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
 }
 
 .logo-text {
@@ -137,16 +128,6 @@
   
   .mobile-menu {
     display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-image {
-    height: 32px;
-  }
-  
-  .logo-text {
-    font-size: 20px;
   }
 }
 

@@ -10,7 +10,6 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-content">
           <Link to="/" className="nav-logo">
-            <img src="/modexia logo.png" alt="Modexia" className="logo-image" />
             <span className="logo-text">Modexia</span>
           </Link>
           
