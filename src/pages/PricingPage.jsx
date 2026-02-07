@@ -1,241 +1,231 @@
-import { Check, X, HelpCircle } from 'lucide-react';
+import { Check, Zap, Shield, TrendingUp, DollarSign } from 'lucide-react';
 
 const PricingPage = () => {
-  const plans = [
-    {
-      name: 'Starter',
-      description: 'Perfect for testing and small projects',
-      price: 0,
-      period: 'free forever',
-      popular: false,
-      features: [
-        { text: '3 AI agent wallets', included: true },
-        { text: '$100 monthly transaction volume', included: true },
-        { text: 'Basic spending controls', included: true },
-        { text: 'Email support (48hr response)', included: true },
-        { text: 'API access', included: true },
-        { text: 'Community access', included: true },
-        { text: 'Sandbox environment', included: true },
-        { text: 'Basic analytics', included: true },
-        { text: 'Webhooks', included: false },
-        { text: 'Priority support', included: false },
-        { text: 'Custom integrations', included: false },
-        { text: 'SLA guarantee', included: false }
-      ]
-    },
-    {
-      name: 'Professional',
-      description: 'For growing teams and production apps',
-      price: 49,
-      period: '/month',
-      popular: true,
-      features: [
-        { text: 'Unlimited AI agent wallets', included: true },
-        { text: '$10,000 monthly transaction volume', included: true },
-        { text: 'Advanced spending controls', included: true },
-        { text: 'Priority email support (12hr response)', included: true },
-        { text: 'API access with higher rate limits', included: true },
-        { text: 'Webhooks & real-time events', included: true },
-        { text: 'Custom approval workflows', included: true },
-        { text: 'Detailed analytics & reporting', included: true },
-        { text: 'Multi-user team access', included: true },
-        { text: '99.9% uptime SLA', included: true },
-        { text: 'Phone support', included: false },
-        { text: 'Custom integrations', included: false }
-      ]
-    },
-    {
-      name: 'Enterprise',
-      description: 'Custom solutions for large organizations',
-      price: 'Custom',
-      period: 'contact sales',
-      popular: false,
-      features: [
-        { text: 'Everything in Professional', included: true },
-        { text: 'Unlimited transaction volume', included: true },
-        { text: 'Dedicated account manager', included: true },
-        { text: '24/7 phone & Slack support', included: true },
-        { text: 'Custom integrations', included: true },
-        { text: '99.99% uptime SLA', included: true },
-        { text: 'Advanced compliance tools', included: true },
-        { text: 'On-premise deployment option', included: true },
-        { text: 'White-label solution', included: true },
-        { text: 'Custom contract terms', included: true },
-        { text: 'Dedicated infrastructure', included: true },
-        { text: 'Training & onboarding', included: true }
-      ]
-    }
-  ];
-
-  const addOns = [
-    {
-      name: 'Additional Transaction Volume',
-      description: 'Add more transaction capacity beyond your plan limit',
-      price: '$0.50 per $1,000',
-      plans: ['Professional', 'Enterprise']
-    },
-    {
-      name: 'Premium Support',
-      description: '24/7 phone and Slack support with 2-hour response time',
-      price: '$500/month',
-      plans: ['Professional']
-    },
-    {
-      name: 'Custom Integration',
-      description: 'We build a custom integration for your specific use case',
-      price: 'Starting at $5,000',
-      plans: ['Professional', 'Enterprise']
-    },
-    {
-      name: 'Compliance Package',
-      description: 'Advanced compliance tools including SOC 2, HIPAA, PCI-DSS',
-      price: '$1,000/month',
-      plans: ['Professional', 'Enterprise']
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'What counts as a transaction?',
-      answer: 'Any payment made by an AI agent to a service or API provider counts as a transaction. We count the dollar amount, not the number of API calls. For example, if an agent pays $5 for OpenAI API usage, that\'s $5 of transaction volume.'
-    },
-    {
-      question: 'What happens if I exceed my transaction volume?',
-      answer: 'On the Starter plan, transactions will be declined once you hit the $100 limit. On Professional and Enterprise plans, we automatically charge overage fees at $0.50 per $1,000 of additional volume. You can set up alerts to notify you before hitting your limit.'
-    },
-    {
-      question: 'Can I upgrade or downgrade my plan?',
-      answer: 'Yes! You can upgrade at any time and the change takes effect immediately. When downgrading, the change takes effect at the end of your current billing period. We\'ll prorate any unused time on your current plan.'
-    },
-    {
-      question: 'Do you offer annual billing?',
-      answer: 'Yes! Annual billing gives you 2 months free (equivalent to 16% off). Contact sales for Enterprise annual contracts with custom terms.'
-    },
-    {
-      question: 'Is there a free trial?',
-      answer: 'The Starter plan is free forever - no credit card required. It\'s perfect for testing and small projects. When you\'re ready to scale, upgrade to Professional or Enterprise.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards (Visa, MasterCard, Amex), ACH transfers, and wire transfers for Enterprise plans. Invoicing is available for annual contracts.'
-    },
-    {
-      question: 'Are there any hidden fees?',
-      answer: 'No hidden fees! The only additional costs are clearly documented overage fees if you exceed your transaction volume on paid plans. Everything else is included in your plan price.'
-    },
-    {
-      question: 'What\'s your refund policy?',
-      answer: 'We offer a 30-day money-back guarantee on all paid plans. If you\'re not satisfied, contact support within 30 days for a full refund, no questions asked.'
-    }
-  ];
-
   return (
     <div className="pricing-page">
-      <section className="page-hero">
+      <section className="page-hero pricing-hero">
+        <div className="hero-background-overlay"></div>
         <div className="container">
           <h1 className="page-title">Simple, Transparent Pricing</h1>
           <p className="page-description">
-            Start free, scale as you grow. No hidden fees, no surprises.
+            Pay only for what you use. No hidden fees, no surprises.
           </p>
-          <div className="billing-toggle">
-            <span className="billing-option active">Monthly</span>
-            <span className="billing-option">Annual <span className="save-badge">Save 16%</span></span>
+        </div>
+      </section>
+
+      <section className="pricing-model-section">
+        <div className="container">
+          <div className="model-header">
+            <h2 className="section-title">How Our Pricing Works</h2>
+            <p className="section-description">
+              We charge a small percentage fee on transactions processed through our platform
+            </p>
+          </div>
+
+          <div className="pricing-model-grid">
+            <div className="model-card primary-model">
+              <div className="model-icon">
+                <DollarSign size={32} />
+              </div>
+              <h3>Transaction-Based Fee</h3>
+              <div className="fee-display">
+                <span className="fee-percentage">2.5%</span>
+                <span className="fee-description">per transaction</span>
+              </div>
+              <p>
+                We only charge when your AI agents successfully transact. No monthly fees, 
+                no setup costs—just a simple percentage on each payment.
+              </p>
+              <ul className="model-features">
+                <li><Check size={18} /> Only pay when you use the service</li>
+                <li><Check size={18} /> No minimum transaction requirements</li>
+                <li><Check size={18} /> Predictable, transparent costs</li>
+                <li><Check size={18} /> Volume discounts available</li>
+              </ul>
+            </div>
+
+            <div className="benefits-cards">
+              <div className="benefit-card">
+                <div className="benefit-icon">
+                  <Zap size={24} />
+                </div>
+                <h4>No Upfront Costs</h4>
+                <p>Get started for free. Create accounts, set up agents, and test integrations without paying a cent.</p>
+              </div>
+
+              <div className="benefit-card">
+                <div className="benefit-icon">
+                  <Shield size={24} />
+                </div>
+                <h4>Enterprise Security</h4>
+                <p>Bank-grade security and compliance included at no extra cost. SOC 2, HIPAA ready.</p>
+              </div>
+
+              <div className="benefit-card">
+                <div className="benefit-icon">
+                  <TrendingUp size={24} />
+                </div>
+                <h4>Scale Automatically</h4>
+                <p>As your volume grows, your per-transaction fee decreases automatically—no negotiation needed.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="pricing-comparison">
+      <section className="volume-pricing-section">
         <div className="container">
-          <div className="pricing-cards">
-            {plans.map((plan, index) => (
-              <div key={index} className={`pricing-card-detailed ${plan.popular ? 'popular' : ''}`}>
-                {plan.popular && <div className="popular-badge">Most Popular</div>}
-                
-                <div className="pricing-card-header">
-                  <h3>{plan.name}</h3>
-                  <p>{plan.description}</p>
-                  <div className="price-display">
-                    {typeof plan.price === 'number' ? (
-                      <>
-                        <span className="currency">$</span>
-                        <span className="amount">{plan.price}</span>
-                        <span className="period">{plan.period}</span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="amount-custom">{plan.price}</span>
-                        <span className="period">{plan.period}</span>
-                      </>
-                    )}
-                  </div>
-                  <a 
-                    href={plan.price === 'Custom' ? '/contact-sales' : '/signup'} 
-                    className={plan.popular ? 'btn-primary full-width' : 'btn-secondary full-width'}
-                  >
-                    {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
-                  </a>
-                </div>
+          <h2 className="section-title">Volume Discounts</h2>
+          <p className="section-description">
+            The more you transact, the less you pay per transaction
+          </p>
 
-                <div className="pricing-card-features">
-                  <h4>Everything included:</h4>
-                  <ul>
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className={feature.included ? 'included' : 'not-included'}>
-                        {feature.included ? <Check size={18} /> : <X size={18} />}
-                        <span>{feature.text}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="volume-tiers">
+            <div className="tier-card">
+              <div className="tier-volume">$0 - $10K</div>
+              <div className="tier-rate">2.5%</div>
+              <div className="tier-label">Standard Rate</div>
+            </div>
+
+            <div className="tier-card highlighted">
+              <div className="tier-volume">$10K - $100K</div>
+              <div className="tier-rate">2.0%</div>
+              <div className="tier-label">Volume Discount</div>
+              <div className="tier-badge">Popular</div>
+            </div>
+
+            <div className="tier-card">
+              <div className="tier-volume">$100K - $1M</div>
+              <div className="tier-rate">1.5%</div>
+              <div className="tier-label">High Volume</div>
+            </div>
+
+            <div className="tier-card">
+              <div className="tier-volume">$1M+</div>
+              <div className="tier-rate">Custom</div>
+              <div className="tier-label">Enterprise</div>
+            </div>
+          </div>
+
+          <div className="pricing-example">
+            <h3>Example Calculation</h3>
+            <div className="example-content">
+              <div className="example-scenario">
+                <strong>Your AI agent makes a $100 payment to an API provider</strong>
+              </div>
+              <div className="example-breakdown">
+                <div className="breakdown-row">
+                  <span>Transaction Amount:</span>
+                  <span>$100.00</span>
+                </div>
+                <div className="breakdown-row">
+                  <span>Modexia Fee (2.5%):</span>
+                  <span>$2.50</span>
+                </div>
+                <div className="breakdown-row total">
+                  <span>Total Cost:</span>
+                  <span>$102.50</span>
                 </div>
               </div>
-            ))}
+              <p className="example-note">
+                Your agent sends $100 to the recipient, and you pay Modexia $2.50 for processing the transaction.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="add-ons-section">
+      <section className="included-features-section">
         <div className="container">
-          <h2 className="section-title">Add-ons & Extensions</h2>
-          <p className="section-description">Extend your plan with premium features</p>
-          <div className="add-ons-grid">
-            {addOns.map((addon, index) => (
-              <div key={index} className="addon-card">
-                <h3>{addon.name}</h3>
-                <p>{addon.description}</p>
-                <div className="addon-price">{addon.price}</div>
-                <div className="addon-plans">
-                  Available for: {addon.plans.join(', ')}
-                </div>
-              </div>
-            ))}
+          <h2 className="section-title">Everything Included</h2>
+          <p className="section-description">
+            No feature gates or premium tiers—every user gets full access
+          </p>
+
+          <div className="included-grid">
+            <div className="included-card">
+              <Check size={24} className="check-icon" />
+              <h4>Unlimited AI Agents</h4>
+              <p>Create as many agent wallets as you need</p>
+            </div>
+
+            <div className="included-card">
+              <Check size={24} className="check-icon" />
+              <h4>Real-Time Monitoring</h4>
+              <p>Track every transaction as it happens</p>
+            </div>
+
+            <div className="included-card">
+              <Check size={24} className="check-icon" />
+              <h4>Spending Controls</h4>
+              <p>Set limits, rules, and approval workflows</p>
+            </div>
+
+            <div className="included-card">
+              <Check size={24} className="check-icon" />
+              <h4>API Access</h4>
+              <p>Full API access with comprehensive docs</p>
+            </div>
+
+            <div className="included-card">
+              <Check size={24} className="check-icon" />
+              <h4>Analytics Dashboard</h4>
+              <p>Detailed insights and reporting</p>
+            </div>
+
+            <div className="included-card">
+              <Check size={24} className="check-icon" />
+              <h4>24/7 Support</h4>
+              <p>Email and chat support included</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="faq-section">
+      <section className="enterprise-section">
+        <div className="container">
+          <div className="enterprise-content">
+            <h2>Need Custom Pricing?</h2>
+            <p>
+              For high-volume transactions over $1M/month, we offer custom enterprise pricing 
+              with dedicated support, SLA guarantees, and tailored solutions.
+            </p>
+            <ul className="enterprise-features">
+              <li><Check size={18} /> Custom transaction rates</li>
+              <li><Check size={18} /> Dedicated account manager</li>
+              <li><Check size={18} /> 99.99% uptime SLA</li>
+              <li><Check size={18} /> Priority phone support</li>
+              <li><Check size={18} /> Custom integrations</li>
+              <li><Check size={18} /> Volume commitments & discounts</li>
+            </ul>
+            <a href="/contact" className="btn-primary btn-large">Contact Sales</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq-preview">
         <div className="container">
           <h2 className="section-title">Frequently Asked Questions</h2>
-          <div className="faq-grid">
-            {faqs.map((faq, index) => (
-              <div key={index} className="faq-item">
-                <div className="faq-question">
-                  <HelpCircle size={20} />
-                  <h3>{faq.question}</h3>
-                </div>
-                <p className="faq-answer">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="cta-banner">
-        <div className="container">
-          <h2>Still have questions?</h2>
-          <p>Our team is here to help you choose the right plan</p>
-          <div className="cta-buttons">
-            <a href="/contact-sales" className="btn-primary btn-large">Talk to Sales</a>
-            <a href="/signup" className="btn-secondary btn-large">Start Free Trial</a>
+          <p className="section-description">
+            Common questions about our pricing
+          </p>
+          <div className="faq-simple-grid">
+            <div className="faq-simple-card">
+              <h4>When do I pay the fee?</h4>
+              <p>The transaction fee is charged automatically when your AI agent completes a payment. It's deducted from your account balance.</p>
+            </div>
+            <div className="faq-simple-card">
+              <h4>Are there any monthly minimums?</h4>
+              <p>No monthly minimums or subscription fees. You only pay when your agents transact.</p>
+            </div>
+            <div className="faq-simple-card">
+              <h4>How do volume discounts work?</h4>
+              <p>Discounts apply automatically based on your total monthly transaction volume. No negotiation needed.</p>
+            </div>
+            <div className="faq-simple-card">
+              <h4>Can I test for free?</h4>
+              <p>Yes! Create accounts and test integrations in sandbox mode completely free. Pay only when you go live.</p>
+            </div>
           </div>
         </div>
       </section>

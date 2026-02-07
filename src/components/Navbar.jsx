@@ -17,8 +17,9 @@ const Navbar = () => {
             <Link to="/about">About</Link>
             <Link to="/product">Product</Link>
             <Link to="/use-cases">Use Cases</Link>
+            <Link to="/pricing">Pricing</Link>
             <Link to="/docs">Documentation</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" className="nav-contact-btn">Contact</Link>
           </div>
 
           <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
@@ -31,6 +32,7 @@ const Navbar = () => {
             <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
             <Link to="/product" onClick={() => setIsOpen(false)}>Product</Link>
             <Link to="/use-cases" onClick={() => setIsOpen(false)}>Use Cases</Link>
+            <Link to="/pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
             <Link to="/docs" onClick={() => setIsOpen(false)}>Documentation</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>

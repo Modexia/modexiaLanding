@@ -9,17 +9,15 @@ const Problem = () => {
             <div className="problem-icon-wrapper">
               <AlertTriangle size={32} />
             </div>
-            <h2 className="problem-title">The Problem</h2>
+            <h2 className="problem-title">The Challenge</h2>
             <p className="problem-text">
-              AI agents need to pay for APIs, make purchases, and handle transactions—but current 
-              payment systems weren't built for autonomous software. Developers face:
+              Traditional payment systems weren't built for AI agents.
             </p>
             <ul className="problem-list">
-              <li>No way to give agents controlled access to funds</li>
-              <li>Risk of unlimited spending without proper guardrails</li>
-              <li>Complex integrations with traditional payment systems</li>
-              <li>Lack of real-time monitoring and transaction visibility</li>
-              <li>Security concerns around autonomous financial operations</li>
+              <li>No controlled fund access</li>
+              <li>Unlimited spending risk</li>
+              <li>Complex integrations</li>
+              <li>Poor visibility</li>
             </ul>
           </div>
 
@@ -27,17 +25,15 @@ const Problem = () => {
             <div className="solution-icon-wrapper">
               <TrendingUp size={32} />
             </div>
-            <h2 className="solution-title">Our Solution</h2>
+            <h2 className="solution-title">The Solution</h2>
             <p className="solution-text">
-              Modexia provides a complete financial infrastructure designed specifically for AI agents. 
-              We make it simple to:
+              Financial infrastructure built for autonomous agents.
             </p>
             <ul className="solution-list">
-              <li>Create secure wallets for any AI agent in seconds</li>
-              <li>Set granular spending limits and approval workflows</li>
-              <li>Enable instant payments to any API or service</li>
-              <li>Monitor every transaction in real-time</li>
-              <li>Scale from prototype to production seamlessly</li>
+              <li>Secure wallets in seconds</li>
+              <li>Granular spending controls</li>
+              <li>Instant payments</li>
+              <li>Real-time monitoring</li>
             </ul>
           </div>
         </div>

@@ -3,7 +3,8 @@ import { Target, Users, Zap, Globe } from 'lucide-react';
 const AboutPage = () => {
   return (
     <div className="about-page">
-      <section className="page-hero">
+      <section className="page-hero about-hero">
+        <div className="hero-background-overlay"></div>
         <div className="container">
           <h1 className="page-title">About Modexia</h1>
           <p className="page-description">
@@ -17,19 +18,12 @@ const AboutPage = () => {
           <div className="story-content">
             <h2>Our Story</h2>
             <p>
-              Modexia was founded on a simple observation: AI agents are becoming increasingly 
-              autonomous, but they lack the financial tools to operate independently. Traditional 
-              payment systems weren't designed for software that makes its own decisions.
+              AI agents are becoming autonomous, but they lack financial tools to operate independently. 
+              We built Modexia to change that.
             </p>
             <p>
-              We built Modexia to be the Stripe for AI Agents—a complete financial infrastructure 
-              that lets LLMs hold wallets, pay for APIs, and transact autonomously with strict 
-              spending limits and complete security.
-            </p>
-            <p>
-              Today, we're empowering thousands of developers and enterprises to build truly 
-              autonomous AI systems that can handle their own financial operations while maintaining 
-              human oversight and control.
+              The Stripe for AI Agents—enabling LLMs to hold wallets, pay for APIs, and transact 
+              autonomously with strict spending limits and complete security.
             </p>
           </div>
         </div>

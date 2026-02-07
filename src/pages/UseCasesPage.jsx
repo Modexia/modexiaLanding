@@ -246,7 +246,8 @@ const UseCasesPage = () => {
 
   return (
     <div className="use-cases-page">
-      <section className="page-hero">
+      <section className="page-hero use-cases-hero">
+        <div className="hero-background-overlay"></div>
         <div className="container">
           <h1 className="page-title">Use Cases & Success Stories</h1>
           <p className="page-description">

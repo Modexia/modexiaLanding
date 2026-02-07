@@ -42,14 +42,6 @@ const HowItWorks = () => {
             </div>
           ))}
         </div>
-
-        <div className="cta-section">
-          <h3>Ready to get started?</h3>
-          <p>Join hundreds of developers already building with Modexia</p>
-          <a href="#signup" className="btn-primary btn-large">
-            Start Building Free
-          </a>
-        </div>
       </div>
     </section>
   );

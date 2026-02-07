@@ -50,7 +50,7 @@ const ContactPage = () => {
                   </div>
                   <div className="method-details">
                     <h4>Email Us</h4>
-                    <a href="mailto:hello@modexia.com">hello@modexia.com</a>
+                    <a href="mailto:hello@modexia.io">hello@modexia.io</a>
                     <p className="method-note">We typically respond within 24 hours</p>
                   </div>
                 </div>
@@ -61,8 +61,8 @@ const ContactPage = () => {
                   </div>
                   <div className="method-details">
                     <h4>Call Us</h4>
-                    <a href="tel:+1-555-0123">+1 (555) 012-3456</a>
-                    <p className="method-note">Monday - Friday, 9am - 6pm PST</p>
+                    <a href="tel:+254719156232">+254 719 156 232</a>
+                    <p className="method-note">Monday - Friday, 9am - 6pm EAT</p>
                   </div>
                 </div>
 
@@ -72,8 +72,7 @@ const ContactPage = () => {
                   </div>
                   <div className="method-details">
                     <h4>Visit Us</h4>
-                    <p>123 Market Street, Suite 400</p>
-                    <p>San Francisco, CA 94103</p>
+                    <p>Nairobi, Kenya</p>
                   </div>
                 </div>
               </div>
@@ -82,16 +81,16 @@ const ContactPage = () => {
                 <h3>Other Ways to Connect</h3>
                 <ul>
                   <li>
-                    <strong>Sales Inquiries:</strong> <a href="mailto:sales@modexia.com">sales@modexia.com</a>
+                    <strong>Sales Inquiries:</strong> <a href="mailto:sales@modexia.io">sales@modexia.io</a>
                   </li>
                   <li>
-                    <strong>Technical Support:</strong> <a href="mailto:support@modexia.com">support@modexia.com</a>
+                    <strong>Technical Support:</strong> <a href="mailto:support@modexia.io">support@modexia.io</a>
                   </li>
                   <li>
-                    <strong>Partnerships:</strong> <a href="mailto:partners@modexia.com">partners@modexia.com</a>
+                    <strong>Partnerships:</strong> <a href="mailto:partners@modexia.io">partners@modexia.io</a>
                   </li>
                   <li>
-                    <strong>Press & Media:</strong> <a href="mailto:press@modexia.com">press@modexia.com</a>
+                    <strong>Press & Media:</strong> <a href="mailto:press@modexia.io">press@modexia.io</a>
                   </li>
                 </ul>
               </div>
@@ -184,7 +183,7 @@ const ContactPage = () => {
             </div>
             <div className="faq-simple-card">
               <h4>Can I schedule a demo?</h4>
-              <p>Yes! Email <a href="mailto:sales@modexia.com">sales@modexia.com</a> to schedule a personalized product demo with our team.</p>
+              <p>Yes! Email <a href="mailto:sales@modexia.io">sales@modexia.io</a> to schedule a personalized product demo with our team.</p>
             </div>
             <div className="faq-simple-card">
               <h4>Do you offer enterprise plans?</h4>
