@@ -214,8 +214,8 @@
 
 .btn-large {
   padding: 16px 36px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* Hero Section */
@@ -313,10 +313,11 @@
   
   .hero-actions .btn-large {
     flex: 1;
-    min-width: 130px;
-    padding: 11px 18px;
-    font-size: 14px;
+    min-width: 100px;
+    padding: 8px 12px;
+    font-size: 12px;
     justify-content: center;
+    white-space: nowrap;
   }
   
   .hero-badge {
